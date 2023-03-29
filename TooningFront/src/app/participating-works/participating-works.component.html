@@ -1,0 +1,48 @@
+<app-header></app-header>
+
+<div class="container text-center">
+
+    <article id="main" class="container row">
+        <!-- <div class="form__group field">
+            <select class="form__field" name="templets">
+                <option value="">작품 번호 별 조회</option>
+                <option *ngFor="let temp of templetsList" [value]="temp.idx">
+                    {{temp.idx}}번 - {{temp.title}}
+                </option>
+            </select>
+            <input type="submit">
+        </div> -->
+        <!-- Using Flexbox, text in the html is coded before images for accessibility purposes. With 'display: flex;' on the parent element, 'order: -1;' can be used on the child element to position images before the text for screen presentation -->
+        <section class="col">
+            <hr class="line">
+            <div class="row row-cols-6">
+                <div class="col-3" *ngFor="let item of boardList|slice:0:show let i=index" style="padding-left: 15px;">
+                    <div style="position: relative; width: 200px;">
+                        <div class="favorite-div" (click)="favoriteClick(item)">
+                            <img *ngIf="item.whether else red" class="favorite" cImg fluid
+                                src="assets/img/icon-favorite-red.png" />
+                            <ng-template #red>
+                                <img class="favorite" cImg fluid src="assets/img/icon-favorite-black.png" />
+                            </ng-template>
+                            <p>{{item.like}}</p>
+                        </div>
+                        <div class="box" (click)="goToParticipantDetail(item)" style="margin-bottom: 30px;">
+                            <img class="card__img" cImg fluid src="{{item.img}}" />
+                            <div>
+                                <p name="rp_id" hidden>{{item.idx}}</p>
+                                <p><strong>{{item.title}}</strong></p>
+                                <hr style="margin-bottom: 10px;">
+                                <p>{{item.writer}}</p>
+                                <p>{{item.date}}</p>
+                                <p>조회 : {{item.looks}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="custom-btn btn-16" *ngIf="boardList?.length || 0 > show " (click)="morebutton()">더보기</button>
+        </section>
+    </article>
+</div>

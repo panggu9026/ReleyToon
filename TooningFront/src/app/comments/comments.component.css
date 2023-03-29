@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p{
+    font-family: 'GmarketSansMedium';
+    font-size: 18px;
+    margin: 0px;
+}
+hr{
+    opacity: 1;
+    border: 1px solid #999999;
+    margin-top: 3px;
+}
+
+.comments-box{
+text-align: left;
+position: relative;;
+}
+.comments-box p:nth-child(1){
+    font-size: 13px;
+}
+.comments-box p:nth-child(2){
+    font-size: 13px;
+}
+.comments-box p:nth-child(3){
+    font-size: 12px;
+}
+.comments-box hr{
+    opacity: 0.55;
+    margin-top: 3px;
+}
+
+.menu{
+    height: 24px;
+    width: 24px;
+    border: none; 
+    background-color: none;
+}
+
+.writing-box{
+    height: 120px;
+    border: 2px solid #999999;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-left: 10px;
+    width: 100px;
+}
+
+.form__field {
+    font-family: 'GmarketSansMedium';
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 13px;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 13px;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    font-family: 'GmarketSansMedium';
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 15px;
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 15px;
+    color: #11998e;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+:invalid {
+    box-shadow: none;
+}
+
+.comment-button{
+    /* position: relative; */
+}
+.w-btn {
+    
+    
+    border: none;
+    display: inline-block;
+    padding: 5px 30px;
+    border-radius: 25px;
+    font-family: 'GmarketSansMedium';
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    width: 120px;
+    background-color: #38ef7d;
+    color: #d4dfe6;
+    margin-top: 12px;
+    height: 30px;
+    
+}
+
+.w-btn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+    background-color: #38ef7d;
+    color: #d4dfe6;
+}
+
+.comments-content p:nth-child(2){
+    font-size: 12px;
+}
+
+.comments-content p:nth-child(3){
+    font-size: 12px;
+}
+
+.comments-content p:nth-child(4){
+    font-size: 8px;
+}

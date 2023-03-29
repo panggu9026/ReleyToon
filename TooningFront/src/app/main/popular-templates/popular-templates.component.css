@@ -1,0 +1,9 @@
+img{
+    display: inline-block;
+   width: 331px;
+   height: 331px;
+   overflow: hidden;
+   object-fit: cover;
+   border-radius: 5px;
+   border: 2px solid black;
+}

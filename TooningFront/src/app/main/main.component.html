@@ -1,0 +1,60 @@
+<!-- <div class="logo">
+    <img cImg fluid src="assets/img/squareLogo.png" />
+</div> -->
+<app-header></app-header>
+<div class="container text-center">
+    <div id="container">
+
+        <div class="section">
+            <strong>안녕하세요!<br>
+                모두를 위한<br>
+                스퀘어입니다.</strong>
+        </div>
+        <div class="section">
+            <strong>릴레이툰<br>
+                제시된 주제로<br>
+                이어질 한 컷을 만들어보세요!</strong>
+        </div>
+        
+        <div class="section">
+            <strong>12월 31일까지 응모가능</strong>
+        </div>
+        <div class="section row">
+            <div class="row stage">
+            <strong>단계_01<br>
+                참가 릴레이툰 선택하여 제작</strong>
+            </div>
+            <div class="row stage-bottom">
+                <div class="col" *ngFor="let item of templetsList">
+                    <!-- <p style="margin-top : 10px">
+                        {{item.idx}}번
+                    </p> -->
+                    <img class="card__img" cImg fluid src="{{item.img}}" 
+                    style="width: 280px; height: 280px;" />
+                    <p style="margin-top : 10px">
+                        {{item.title}}
+                    </p>
+                </div>
+                </div>
+        </div>
+        <div class="section row">
+            <div class="row stage">
+                <strong>단계_02<br>
+                    아래 신청서 작성</strong>
+            </div>
+            <div class="row stage-bottom">
+                <div class="col">
+                    <button (click)="participatingWorks()" class="w-btn-neon2"> 참가작보기 </button>
+                </div>
+                <div class="col">
+                    <button (click)="participating()" class="w-btn-neon2"> 참가하기 </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr style="border: solid 2px #9b9b9b; opacity: 0.75;">
+    <div class="section row">
+        <strong style="width: auto; margin-top: 200px; margin-bottom: 90px;">인기템플릿</strong>
+        <app-popular-templates></app-popular-templates>
+    </div>

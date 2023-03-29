@@ -1,0 +1,81 @@
+<div style="text-align: left;">
+    <p>댓글({{commentCount}})</p>
+    <hr>
+</div>
+
+<div class="comments-box">
+    <div class="col-4 comments-content" *ngFor="let comm of commentList">
+        <input type="hidden" name="comment_id" value="{{comm.idx}}">
+        <!-- 닉네임 -->
+        <p><strong>{{comm.writer}}</strong></p>
+        <!-- 댓글내용 -->
+        <p>{{comm.content}}</p>
+        <!-- 날짜 -->
+        <p class="date">{{comm.date}}</p>
+        <button class="menu" [matMenuTriggerFor]="menu">
+            <mat-icon> list </mat-icon>
+        </button>
+        <hr>
+        <button (click)="replyClick(comm)"> 답글 </button>
+
+        <!--답글 컨테이너-->
+        <div *ngIf="comm.reply == true">
+            <form ngNoForm [action]="comment_insert_url" method="post">
+                <div class="writing-box row row-col-6">
+                    <div class="form__group field col-2">
+                        <input class="form__field" placeholder="Name" type="text" name="title" maxlength="50"
+                            value="" />
+                        <label for="Name" class="form__label">닉네임</label>
+                    </div>
+
+                    <div class="col-8">
+                        <textarea class="form-control" placeholder="댓글을 남겨보세요" name="contents" rows="2"
+                            cols="50"></textarea>
+                    </div>
+                    <div class="col-2">
+                        <div class="form__group field">
+                            <input class="form__field" placeholder="Name" type="password" id="password" name="password"
+                                maxlength="50" value="" />
+                            <label for="Name" class="form__label">비밀번호</label>
+                            <div class="comment-button">
+                                <input class="w-btn" type="submit" value="댓글 등록" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--답글 컨테이너-->
+
+    </div>
+</div>
+
+<form ngNoForm [action]="comment_insert_url" method="post">
+    <div class="writing-box row row-col-6">
+        <div class="form__group field col-2">
+            <input class="form__field" placeholder="Name" type="text" name="title" maxlength="50" value="" />
+            <label for="Name" class="form__label">닉네임</label>
+        </div>
+
+        <div class="col-8">
+            <textarea class="form-control" placeholder="댓글을 남겨보세요" name="contents" rows="2" cols="50"></textarea>
+        </div>
+        <div class="col-2">
+            <div class="form__group field">
+                <input class="form__field" placeholder="Name" type="password" id="password" name="password"
+                    maxlength="50" value="" />
+                <label for="Name" class="form__label">비밀번호</label>
+                <div class="comment-button">
+                    <input class="w-btn" type="submit" value="댓글 등록" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<mat-menu class="mat" #menu="matMenu">
+    <input mat-menu-item type="button" value="수정하기" />
+    <form ngNoForm [action]="delete_url" method="get" enctype="multipart/form-data">
+        <input mat-menu-item type="submit" value="삭제하기" />
+    </form>
+</mat-menu>

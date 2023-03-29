@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div style="height: 200px;"></div>
+<div class="container text-center ">
+    <div class="row post-header">
+        <div style="position: relative;">
+            <span class="listbutton" (click)="goToParticipatingWorks()" style="cursor: pointer">목록으로 ></span>
+            <button class="menu" [matMenuTriggerFor]="menu">
+                <mat-icon> list </mat-icon>
+            </button>
+        </div>
+        <p class="title">{{this.title}}</p>
+        <p>{{this.writer}}</p>
+        <div style="position: relative;">
+            <p>{{this.date}}</p>
+            <p style="position: absolute; right: 0; bottom: 1px;">조회 : {{this.looks}}</p>
+        </div>
+        <hr>
+    </div>
+
+    <img src="{{this.rt_img}}" style="width: 500px; height: 500px;" />
+    <img src="{{this.img}}" style="width: 500px; height: 500px;" />
+    <div class="content">
+        <p>{{this.content}}</p>
+    </div>
+    <app-comments></app-comments>
+</div>
+
+
+<div style="height: 100px;"></div>
+<mat-menu class="mat" #menu="matMenu">
+    <input mat-menu-item type="button" (click)="modifyAlert()" value="수정하기" />
+    <form ngNoForm [action]="delete_url" method="get" enctype="multipart/form-data">
+        <input mat-menu-item type="submit" (click)="deleteAlert()" value="삭제하기" />
+    </form>
+</mat-menu>

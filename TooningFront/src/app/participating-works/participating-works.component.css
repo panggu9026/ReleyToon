@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* RESET */
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'GmarketSansMedium';
+}
+
+.container {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    width: 1000px;
+}
+
+span {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'GmarketSansMedium';
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/*  GENERAL */
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+header,
+section {
+    text-align: center;
+    padding: 0rem 1rem 5rem;
+}
+
+/* TYPOGRAPHY */
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+    margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+p,
+a,
+ul,
+ol {
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical
+}
+
+li {
+    list-style: none;
+}
+
+/* FALLBACK FOR FLEXBOX & GRID */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.line{
+    margin-bottom: 30px;
+    border: 1px solid #4e4e4e;
+    opacity: 1;
+}
+
+
+/* LAYOUT & DESIGN */
+
+#main{
+    width: 1000px;
+    padding-top: 50px;
+}
+
+
+.box {
+    width: 200px;
+    text-align: left;
+    background: #fff;
+    height: auto;
+}
+
+
+
+.card__img {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    margin-bottom: 1rem;
+    height: 200px;
+    width: 200px;
+}
+p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+    color: #333333;
+}
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form__field {
+    font-family: 'GmarketSansMedium';
+    width: 80%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'GmarketSansMedium';
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  .btn-16 {
+    border: none;
+    color: #000;
+  }
+  .btn-16:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  .btn-16:hover {
+    color: #000;
+  }
+  .btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-16:active {
+    top: 2px;
+  }
+
+  .favorite{
+    width: 24px;
+    height: 24px;
+  }
+
+  .favorite-div{
+    position: absolute;
+width: 24px;
+height: 24px;
+right: 6px;
+top: 6px;
+  }
+  .favorite-div p{
+    font-size: 6px;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+    color: white;
+  }
+  

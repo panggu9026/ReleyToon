@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    padding-top: 200px;
+    width: 900px;
+}
+
+span {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'GmarketSansMedium';
+}
+
+.custom-file {
+    width: 900px;
+}
+
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form__field {
+    font-family: 'GmarketSansMedium';
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    font-family: 'GmarketSansMedium';
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+:invalid {
+    box-shadow: none;
+}
+
+.w-btn-outline {
+    margin-top: 120px;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-family: 'GmarketSansMedium';
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    border: 2px solid #38ef7d;
+    color: #9b9b9b;
+}
+.w-btn-outline:hover {
+    background-color: #38ef7d;
+    color: #ffffff;
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.imgbox{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #a3a1a1;
+    border-radius: 15px;
+}
+
+.w-btn {
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-family: 'GmarketSansMedium';
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    width: 200px;
+    background-color: #38ef7d;
+    color: #d4dfe6;
+    margin: 30px;
+}
+
+.w-btn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+    background-color: #38ef7d;
+    color: #d4dfe6;
+}
+
